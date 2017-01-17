@@ -21,9 +21,14 @@ python ui2jui.py -r
 ***NOTE: if you want to remove original file after converted just add -rm flag***
 
 ####Tips
-add ui2jui.py to your local binary directory just so you can call the ui2jui from any directory you want
+add ui2jui.py to your local binary directory so that you can call the ui2jui from any directory you want
 
 ```
 sudo ln -s abs_path_to_ui2jui.py /usr/local/bin/ui2jui
 sudo chmod +x /usr/local/bin/ui2jui
+```
+
+now you can call the script from any **working directory** you want with
+```
+ui2jui options
 ```
