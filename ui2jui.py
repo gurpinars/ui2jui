@@ -23,7 +23,7 @@ def convert(ui_file):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="converter to .ui files to .jui")
+    parser = argparse.ArgumentParser(description="converter from .ui files to .jui")
     parser.add_argument('-f', '--file', help='ui file to be converted')
     parser.add_argument('-d', '--directory', help='convert all files of curdir', action="store_true")
     parser.add_argument('-r', '--recursive', help='convert all .ui files of curdir', action="store_true")
@@ -37,7 +37,7 @@ def main():
                 del_file(file)
         print "converted"
 
-    if args.directory:
+    elif args.directory:
         for file in get_ui_files_from_dir():
             convert(file)
         if args.remove:
@@ -45,7 +45,7 @@ def main():
                 del_file(file)
         print "converted"
 
-    if not (args.directory or args.recursive):
+    elif not (args.file == None):
         convert(args.file)
         if args.remove:
             del_file(args.file)
