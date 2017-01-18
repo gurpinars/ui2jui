@@ -1,3 +1,10 @@
+# FYI
+You do not really need this tool, all you need to do to save the qtdesigner's ui as .jui is locate your **JAVA_HOME** on your *\*rc file*
+to do so:
+```
+export JAVA_HOME=path_to_java_home
+```
+
 ## ui2jui
 Small tool to convert qt designer ui files to jui(Java user interface definition file) which is required for
 JUIC(Java User Interface Compiler) to generate java source files.
